@@ -1,8 +1,8 @@
 import 'reflect-metadata';
-import { Product } from './entity/Product';
-import { Category } from './entity/Category';
-import { Brand } from './entity/Brand';
-import {DataSource} from 'typeorm';
+import { DataSource } from "typeorm";
+import { Category } from "./entity/Category";
+import { Product } from "./entity/Product";
+import { Brand } from  './entity/Brand';
 
 export const AppDataSource = new DataSource({
     type: 'mysql',

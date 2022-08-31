@@ -2,15 +2,15 @@ import { BaseEntity, Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, U
 
 @Entity()
 export class Brand extends BaseEntity {
-    @PrimaryGeneratedColumn() 
+    @PrimaryGeneratedColumn()
     id: number;
 
     @Column({nullable: false, length: 50})
     name: string;
 
     @CreateDateColumn()
-    createdAt: Date;
-    
+    createAt: Date;
+
     @UpdateDateColumn()
-    updatedAt: Date;
+    updateAt: Date;
 }

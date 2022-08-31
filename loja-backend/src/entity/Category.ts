@@ -2,15 +2,15 @@ import { BaseEntity, Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, U
 
 @Entity()
 export class Category extends BaseEntity {
-    @PrimaryGeneratedColumn()
+    @PrimaryGeneratedColumn() 
     id: number;
 
     @Column({nullable: false, length: 50})
     name: string;
 
     @CreateDateColumn()
-    createAt: Date;
-
+    createdAt: Date;
+    
     @UpdateDateColumn()
-    updateAt: Date;
+    updatedAt: Date;
 }
