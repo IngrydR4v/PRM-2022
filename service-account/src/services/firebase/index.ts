@@ -1,9 +1,8 @@
-import { AsyncLocalStorage } from 'async_hooks';
 import dotenv from 'dotenv';
-import { FirebaseError, initializeApp } from "firebase/app";
+import { initializeApp, FirebaseError } from "firebase/app";
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 
-//Carregar variáveis de ambiente
+//Carregar variaveis de ambiente
 dotenv.config();
 
 const firebaseConfig = {
@@ -15,10 +14,10 @@ const firebaseConfig = {
   appId: process.env.APPID
 };
 
-//Initialize Firebase
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-//Autenticação
+//Atutenticação
 const signInAdmin = (email: string, password: string) => (signInWithEmailAndPassword(getAuth(), email, password));
 
 export {FirebaseError, signInAdmin}

@@ -3,6 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import routes from './routes';
 
+//Carrego as variaveis de ambiente da aplicação
 dotenv.config();
 
 //Instancio uma aplicação express
@@ -18,9 +19,8 @@ app.use(express.json());
 //Importa as rotas
 app.use('/account', routes);
 
+
 //Inicio a aplicação
 app.listen(PORT, () => {
-    console.log(`Running in port ${PORT}`);
-})
-
-
+    console.log(`Service Account running in port ${PORT}`);
+});
